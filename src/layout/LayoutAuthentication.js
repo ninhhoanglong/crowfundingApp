@@ -7,7 +7,7 @@ import ErrorComponent from "../components/common/ErrorComponent";
 const LayoutAuthentication = (props) => {
   const { children, heading = "" } = props;
   return (
-    <div className="relative w-full min-h-screen p-10 bg-lite dark:bg-darkbg isolate">
+    <div className="relative w-full min-h-screen h-[1000px] p-10 bg-lite dark:bg-darkbg isolate">
       <img
         src="/ellipse.png"
         alt="bg"
