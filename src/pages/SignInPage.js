@@ -1,46 +1,37 @@
-import { Button } from "components/button";
-import { IconEyeToggle } from "components/icons";
-import { Input } from "components/input";
-import { Label } from "components/label";
-import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import ButtonGoogle from "components/button/ButtonGoogle";
-import FormGroup from "components/common/FormGroup";
-import LayoutAuthentication from "../layout/LayoutAuthentication";
-import React from "react";
 import useToggleValue from "hooks/useToggleValue";
+import React from "react";
+import LayoutAuthentication from "../layout/LayoutAuthentication";
+import FormGroup from "components/common/FormGroup";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { Label } from "components/label";
+import { Input } from "components/input";
+import { IconEyeToggle } from "components/icons";
+import { Button, ButtonGoogle } from "components/button";
 
 const schema = yup.object({
-  email: yup.string().email(" ").required("This field is required"),
+  email: yup.string().email("").required("This field is required"),
   password: yup
     .string()
     .required("This field is required")
-    .min(8, "Password must be 8 character"),
+    .min(8, "Password must be 8 character "),
 });
-
 const SignInPage = () => {
   const {
     handleSubmit,
     control,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(schema),
     mode: "onSubmit",
   });
-
-  const handleSignIn = (values) => {
-    console.log(
-      "🚀 ~ file: SignInPage.js ~ line 18 ~ handleSignIn ~ values",
-      values
-    );
-  };
-
   const { value: showPassword, handleToggleValue: handleTogglePassword } =
     useToggleValue();
-
+  const handleSignIn = (values) => {
+    console.log(values);
+  };
   return (
     <LayoutAuthentication heading="Welcome Back!">
       <p className="mb-6 text-xs font-normal text-center lg:text-sm text-text3 lg:mb-8">
@@ -49,8 +40,7 @@ const SignInPage = () => {
           Sign up
         </Link>
       </p>
-      <ButtonGoogle text="Sign up with google"></ButtonGoogle>
-
+      <ButtonGoogle text="Sign in with google"></ButtonGoogle>
       <form onSubmit={handleSubmit(handleSignIn)}>
         <FormGroup>
           <Label htmlFor="email">Email *</Label>
@@ -66,8 +56,8 @@ const SignInPage = () => {
           <Input
             control={control}
             name="password"
-            placeholder="Create a password"
             type={`${showPassword ? "text" : "password"}`}
+            placeholder="Enter Password"
             error={errors.password?.message}
           >
             <IconEyeToggle
@@ -78,12 +68,12 @@ const SignInPage = () => {
         </FormGroup>
         <FormGroup>
           <div className="text-right">
-            <span className="inline-block mb-5 text-sm font-medium cursor-pointer gap-x-5 text-primary">
+            <span className="inline-block text-sm font-medium text-primary">
               Forgot password
             </span>
           </div>
         </FormGroup>
-        <Button className="w-full bg-primary" type="submit">
+        <Button className="w-full" kind="primary" type="submit">
           Sign in
         </Button>
       </form>

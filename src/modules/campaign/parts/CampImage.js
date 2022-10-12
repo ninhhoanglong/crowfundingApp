@@ -1,7 +1,7 @@
 import { defaultImage } from "constants/global";
 import React from "react";
 
-const CampImage = ({ image = defaultImage, className = "h-[158px]" }) => {
+const CampImage = ({ className = "h-[158px]", image = defaultImage }) => {
   return (
     <div className={className}>
       <img

@@ -8,7 +8,7 @@ const CampCategory = ({ text = "Education", className = "text-xs" }) => {
     <Link
       to="/"
       className={classNames(
-        "flex items-baseline text-xs font-medium mb-4 gap-x-3 text-text3",
+        "flex items-baseline mb-4 font-medium gap-x-3 text-text3",
         className
       )}
     >

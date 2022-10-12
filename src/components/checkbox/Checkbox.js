@@ -11,8 +11,10 @@ const Checkbox = ({
     <div className="flex items-start gap-x-5">
       <div
         className={classNames(
-          "inline-flex items-center justify-center p-1 text-white w-5 h-5 border rounded cursor-pointer select-none",
-          checked ? "bg-primary" : "border-strock dark:border-text3"
+          "inline-flex items-center justify-center p-1 text-white w-5 h-5 border rounded cursor-pointer",
+          checked
+            ? "bg-primary border-primary"
+            : "border-strock dark:border-text3"
         )}
         onClick={onClick}
       >
@@ -24,15 +26,15 @@ const Checkbox = ({
         />
         <span className={classNames(checked ? "" : "opacity-0 invisible")}>
           <svg
-            width="16"
-            height="12"
-            viewBox="0 0 16 12"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
             <path
-              d="M5.60078 7.91999L2.48078 4.79999L0.800781 6.47999L5.60078 11.28L15.2008 1.68L13.5208 0L5.60078 7.91999Z"
-              fill="white"
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clipRule="evenodd"
             />
           </svg>
         </span>

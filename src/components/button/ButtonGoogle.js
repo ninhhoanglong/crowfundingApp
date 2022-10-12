@@ -14,12 +14,10 @@ const ButtonGoogle = ({ text = "Sign up with google", onClick = () => {} }) => {
     </button>
   );
 };
-
 ButtonGoogle.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
 };
-
 export default withErrorBoundary(ButtonGoogle, {
   FallbackComponent: ErrorComponent,
 });

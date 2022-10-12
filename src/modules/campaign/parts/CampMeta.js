@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "utils/classNames";
 
 const CampMeta = ({
-  amout = "$2,000",
+  amount = "$2,000",
   text = "Raised of $1,900",
   size = "small",
 }) => {
@@ -14,7 +14,7 @@ const CampMeta = ({
           size === "small" ? "text-sm" : "text-xl"
         )}
       >
-        {amout}
+        {amount}
       </h4>
       <span
         className={classNames(

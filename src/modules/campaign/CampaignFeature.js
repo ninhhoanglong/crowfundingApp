@@ -22,13 +22,9 @@ const CampaignFeature = () => {
           <div className="w-2/4 h-full rounded-full bg-primary"></div>
         </div>
         <div className="flex items-start justify-between gap-x-5">
-          <CampMeta
-            amout="$2,000"
-            text="Raised of $2,500"
-            size="big"
-          ></CampMeta>
-          <CampMeta amout="173" text="Total backers" size="big"></CampMeta>
-          <CampMeta amout="30" text="Days left" size="big"></CampMeta>
+          <CampMeta size="big"></CampMeta>
+          <CampMeta size="big"></CampMeta>
+          <CampMeta size="big"></CampMeta>
         </div>
       </div>
     </div>

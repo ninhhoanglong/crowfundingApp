@@ -12,15 +12,15 @@ const CampaignItem = () => {
   return (
     <div>
       <CampImage></CampImage>
-      <div className="px-5 py-4 ">
+      <div className="px-5 py-4">
         <CampCategory></CampCategory>
         <CampTitle>Powered Kits Learning Boxes</CampTitle>
         <CampDesc>
           Fun, durable and reusable boxes with eco-friendly options.
         </CampDesc>
-        <div className="flex items-center justify-between mb-5 gap-x-5">
+        <div className="flex items-start justify-between mb-5 gap-x-5">
           <CampMeta></CampMeta>
-          <CampMeta amout="173" text="Total backers"></CampMeta>
+          <CampMeta></CampMeta>
         </div>
         <CampAuthor></CampAuthor>
       </div>
