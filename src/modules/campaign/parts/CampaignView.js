@@ -13,12 +13,7 @@ import CampViewAuthor from "./CampViewAuthor";
 const CampaignView = () => {
   return (
     <Fragment>
-      <div
-        className="h-[140px] rounded-3xl bg-cover bg-no-repeat bg-center bg-opacity-40 flex items-center justify-center text-white text-[40px] font-bold mb-10"
-        style={{
-          backgroundImage: `linear-gradient(179.14deg, rgba(32, 18, 63, 0) -7.14%, rgba(0,0,0,0.4) 87.01%),url(/banner.png)`,
-        }}
-      >
+      <div className="h-[140px] rounded-3xl bg-cover bg-no-repeat bg-center bg-opacity-40 flex items-center justify-center text-white text-[40px] font-bold mb-10 gradient-banner">
         <h1>Education</h1>
       </div>
       <div className="flex items-start gap-x-10 w-full max-w-[1066px]">
@@ -66,13 +61,14 @@ const CampaignView = () => {
         <Button className="text-white bg-primary">Back this project</Button>
       </div>
       <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
-        <div></div>
+        <div>
+          <h2 className="mb-5 text-lg font-semibold uppercase">Story</h2>
+          <div className="w-full bg-white"></div>
+        </div>
         <div>
           <CampaignSupport></CampaignSupport>
           <div className="mb-[60px]"></div>
           <div className="flex flex-col gap-y-[30px]">
-            <CampaignPerk></CampaignPerk>
-            <CampaignPerk></CampaignPerk>
             <CampaignPerk></CampaignPerk>
             <CampaignPerk></CampaignPerk>
           </div>
