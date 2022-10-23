@@ -1,20 +1,20 @@
 {
-  "users": [
+  "users": [],
+  "categories": [],
+  "campaigns": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "active": true,
-      "posts": 10,
-      "messages": 50
-    },
-    {
-      "id": 8,
-      "firstName": "Clay",
-      "lastName": "Chung",
-      "active": true,
-      "posts": 8,
-      "messages": 5
+      "title": "Ninh Hoang Long",
+      "short_description": "decriptionnnnnnnnnnnnnnnn",
+      "goal": "20",
+      "amount": "40",
+      "prefilled": "10,20",
+      "video": "https://www.youtube.com/watch?v=yZ9Tf9_5rOk",
+      "category": "architecture",
+      "country": "Vietnam",
+      "content": "<p>storyyyyyyyyyyyyyyyyyyyyyyyy</p>",
+      "startDate": "2022-10-22T14:43:18.708Z",
+      "endDate": "2022-11-03T17:00:00.000Z",
+      "id": 1
     }
   ]
 }

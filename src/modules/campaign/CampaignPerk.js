@@ -31,8 +31,7 @@ const CampaignPerk = ({ showButton = false }) => {
             <span className="text-text2">October 2022</span>
           </div>
           <p className="mb-4 text-text2">
-            <strong className="text-text1">05</strong>
-            claimed
+            <strong className="text-text1">05</strong> claimed
           </p>
           <p className="text-text2">Ships worldwide</p>
         </div>
